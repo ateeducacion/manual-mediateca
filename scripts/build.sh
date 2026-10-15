@@ -25,6 +25,7 @@ pandoc manual/manual-mediateca.md \
   --variable mainfont="Liberation Sans" \
   --variable geometry="margin=2.2cm" \
   --variable fontsize=11pt \
+  --variable papersize=a4 \
   --variable colorlinks=true \
   --variable linkcolor=black \
   --variable urlcolor=blue \
