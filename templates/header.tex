@@ -20,5 +20,7 @@
 \renewcommand{\headrulewidth}{0.4pt}
 \renewcommand{\footrulewidth}{0pt}
 \providecommand{\tightlist}{\setlength{\itemsep}{2pt}\setlength{\parskip}{0pt}}
-\setlength{\emergencystretch}{3em}
-\sloppy
+% Allow moderate emergency stretching while favoring natural word breaks.
+\setlength{\emergencystretch}{2em}
+% Encourage automatic hyphenation instead of overly stretched spaces.
+\hyphenpenalty=25
