@@ -16,6 +16,15 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Check tag matches version.env
+        if: startsWith(github.ref, 'refs/tags/v')
+        run: |
+          source version.env
+          if [ "v${VERSION}" != "${GITHUB_REF_NAME}" ]; then
+            echo "::error::La etiqueta ${GITHUB_REF_NAME} no coincide con version.env (VERSION=${VERSION})"
+            exit 1
+          fi
+
       - name: Install pandoc and LaTeX
         run: |
           sudo apt-get update
@@ -32,6 +41,33 @@ jobs:
           path: dist/*.pdf
           if-no-files-found: error
 
+  # Cada merge a main reemplaza la pre-release "latest" con el PDF recién generado.
+  latest:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    needs: build
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: write
+    concurrency:
+      group: latest-release
+      cancel-in-progress: true
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: manual-mediateca-pdf
+          path: dist
+
+      - name: Publish 'latest' pre-release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          SHA: ${{ github.sha }}
+        run: |
+          gh release delete latest --repo "$REPO" --cleanup-tag --yes || true
+          gh release create latest dist/*.pdf --repo "$REPO" --target "$SHA" --prerelease \
+            --title "Manual Mediateca (última versión de main)" \
+            --notes "PDF generado automáticamente desde main (${SHA::7}). No es una versión oficial; las versiones publicadas son las etiquetas vX.Y."
+
   release:
     if: startsWith(github.ref, 'refs/tags/v')
     needs: build
@@ -39,14 +75,27 @@ jobs:
     permissions:
       contents: write
     steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
       - uses: actions/download-artifact@v4
         with:
           name: manual-mediateca-pdf
           path: dist
 
+      # Si la release ya existe (creada desde la web de GitHub) solo se adjunta el PDF.
       - name: Publish release
         env:
           GH_TOKEN: ${{ github.token }}
           TAG: ${{ github.ref_name }}
           REPO: ${{ github.repository }}
-        run: gh release create "$TAG" dist/*.pdf --repo "$REPO" --title "Manual Mediateca $TAG" --generate-notes
+        run: |
+          if gh release view "$TAG" --repo "$REPO" >/dev/null 2>&1; then
+            gh release upload "$TAG" dist/*.pdf --repo "$REPO" --clobber
+          else
+            PREV=$(git describe --tags --abbrev=0 --match 'v*' "${TAG}^" 2>/dev/null || true)
+            gh release create "$TAG" dist/*.pdf --repo "$REPO" \
+              --title "Manual Mediateca $TAG" --generate-notes \
+              ${PREV:+--notes-start-tag "$PREV"}
+          fi

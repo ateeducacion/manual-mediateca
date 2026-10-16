@@ -27,14 +27,20 @@ make pdf        # -> dist/manual-mediateca-v<VERSION>.pdf
 ## Pipeline
 
 El workflow [`build-pdf.yml`](.github/workflows/build-pdf.yml) genera el PDF en cada *push* y *pull request*
-(artefacto `manual-mediateca-pdf`). Al subir una etiqueta `vX.Y` se publica además una *release* con el PDF adjunto.
+(artefacto `manual-mediateca-pdf`), y además:
+
+- **Merge a `main`**: sustituye la *pre-release* [`latest`](../../releases/tag/latest) por el PDF recién generado
+  (versión de trabajo, no oficial).
+- **Etiqueta `vX.Y`**: comprueba que coincide con `VERSION` de `version.env`, genera el PDF y lo adjunta a la
+  *release* `vX.Y` (la crea si no existe; si se creó desde la web de GitHub, solo añade el PDF).
 
 ## Cómo editar
 
 1. Crea una rama y modifica `manual/manual-mediateca.md`.
 2. Si cambia la versión, actualiza `version.env` y `CHANGELOG.md`.
 3. Abre una *pull request*; el pipeline comprobará que el PDF se genera.
-4. Para publicar: `git tag vX.Y && git push origin vX.Y`.
+4. Para publicar: actualiza `version.env` a `X.Y` en `main` y después `git tag vX.Y && git push origin vX.Y`
+   (o crea la *release* `vX.Y` desde la web de GitHub).
 
 Convenciones: tratamiento de «usted», comillas simples `'...'` para nombres de elementos de la interfaz, y figuras numeradas
 correlativamente (`**Figura N:**`) en orden de aparición.
