@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Genera dist/manual-mediateca-v<VERSION>.pdf a partir de manual/manual-mediateca.md
+# Genera dist/manual-mediateca-v<VERSION>.pdf a partir de los capítulos de manual/capitulos/ (en orden de nombre)
 set -euo pipefail
 export LANG=C.UTF-8 LC_ALL=C.UTF-8
 cd "$(dirname "$0")/.."
@@ -11,10 +11,10 @@ printf '\\newcommand{\\manualversion}{%s}\n\\newcommand{\\manualdate}{%s}\n' "$V
 
 OUT="dist/manual-mediateca-v${VERSION}.pdf"
 
-pandoc manual/manual-mediateca.md \
+pandoc manual/capitulos/*.md \
   --from commonmark_x \
   --pdf-engine=xelatex \
-  --resource-path=.:manual \
+  --resource-path=.:manual/capitulos \
   --lua-filter=templates/figures.lua \
   --include-in-header=templates/header.tex \
   --include-before-body=templates/cover.tex \

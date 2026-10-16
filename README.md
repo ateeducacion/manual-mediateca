@@ -6,8 +6,9 @@ Control de versiones del **Manual de usuario del servicio de Mediateca** (*Guía
 
 | Ruta | Contenido |
 | --- | --- |
-| `manual/manual-mediateca.md` | Texto fuente del manual (GitHub Flavored Markdown) |
-| `manual/media/` | Capturas y logotipos |
+| `manual/capitulos/` | Texto fuente del manual, un fichero por capítulo (`NN-nombre.md`, se unen en orden de nombre) |
+| `manual/media/` | Capturas de pantalla de las figuras |
+| `manual/assets/` | Logotipos de la portada |
 | `manual/original-v1.1.docx` | Documento Word original (v1.1), solo como referencia histórica |
 | `templates/` | Portada, cabeceras/pies LaTeX y filtro Lua para los pies de figura |
 | `scripts/build.sh` | Genera el PDF con pandoc + XeLaTeX |
@@ -36,7 +37,8 @@ El workflow [`build-pdf.yml`](.github/workflows/build-pdf.yml) genera el PDF en 
 
 ## Cómo editar
 
-1. Crea una rama y modifica `manual/manual-mediateca.md`.
+1. Crea una rama y modifica el capítulo correspondiente en `manual/capitulos/`. Las imágenes se enlazan como
+   `../media/imageN.png`.
 2. Si cambia la versión, actualiza `version.env` y `CHANGELOG.md`.
 3. Abre una *pull request*; el pipeline comprobará que el PDF se genera.
 4. Para publicar: actualiza `version.env` a `X.Y` en `main` y después `git tag vX.Y && git push origin vX.Y`
