@@ -114,7 +114,7 @@ Para ello, la plantilla 'Ficha_Mediateca' incluye el campo obligatorio **Derecho
 
 - **Varios valores:** los botones solo se muestran si todos los valores son 'Acceso abierto'. Basta con que uno sea distinto para que se oculten.
 
-- **Sin valor:** los botones se muestran. Es el caso de las fichas creadas antes de que se incorporara este campo.
+- **Sin valor:** los botones se muestran (ver más abajo «Fichas sin valor en este campo»).
 
 **¿Qué valor elegir?**
 
@@ -128,7 +128,13 @@ Para ello, la plantilla 'Ficha_Mediateca' incluye el campo obligatorio **Derecho
 
 **Consentimientos e imágenes de menores:** independientemente del valor de este campo, para publicar fotografías, vídeos o audios en los que aparezcan personas, en especial alumnado, siempre debe contar con los consentimientos pertinentes (sección 4.2) y asegurarse de que los materiales se publican con fines educativos. Restringir el acceso no sustituye en ningún caso al consentimiento. En general, debemos velar por el interés superior del menor y minimizar su exposición pública, por lo que se desaconseja la publicación de imágenes de menores en abierto.
 
-**Fichas creadas anteriormente:** las fichas existentes no tienen valor en este campo y, por tanto, siguen mostrando los botones. Revise especialmente las fichas con fotografías o vídeos de personas y asigne el valor que corresponda. Si son muchas, puede hacerlo con la edición en lote (capítulo 7).
+**Fichas sin valor en este campo:** si una ficha no tiene ningún valor en 'Derechos de acceso', los botones de descarga, enlace e incrustación se siguen mostrando. Esto ocurre en dos casos:
+
+- Fichas creadas antes de que se añadiera este campo a la plantilla 'Ficha_Mediateca'.
+
+- Fichas creadas sin usar la plantilla 'Ficha_Mediateca' (por ejemplo, si se cambió o se quitó la plantilla en el formulario), ya que en ese caso el campo no es obligatorio.
+
+Revise especialmente las fichas con fotografías, vídeos o audios de personas y asigne el valor que corresponda. Si son muchas, puede hacerlo con la edición en lote (capítulo 7).
 
 **Nota:** estos botones solo aparecen en los archivos del apartado 'Files' de la vista pública de la ficha. El resto de medios no los muestra.
 
