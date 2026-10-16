@@ -96,7 +96,7 @@ Antes de subir cualquier imagen, vídeo o documento que contenga datos personale
 
 ### 4.2.1. Derechos de acceso: descarga y difusión de los archivos
 
-No todo el contenido que se publica en la Mediateca debe poder descargarse o compartirse libremente. Por ejemplo, las fotografías de una actividad en la que aparece el alumnado pueden mostrarse en el sitio del centro, pero no conviene facilitar que se descarguen o se inserten en otras páginas web.
+No todo el contenido que se publica en la Mediateca debe poder descargarse o compartirse libremente. Por ejemplo, las fotografías de una actividad del centro pueden mostrarse en su sitio, pero no conviene facilitar que se descarguen o se inserten en otras páginas web.
 
 Para ello, la plantilla 'Ficha_Mediateca' incluye el campo obligatorio **Derechos de acceso \[dcterms:accessRights\]**. Su valor determina si, en la vista pública de la ficha, junto a cada archivo se muestran los botones para:
 
@@ -124,7 +124,9 @@ Para ello, la plantilla 'Ficha_Mediateca' incluye el campo obligatorio **Derecho
 
 - **En caso de duda, elija la opción restringida.** Siempre podrá cambiarla más adelante si se confirma que el contenido puede compartirse.
 
-**Importante: qué protege y qué no protege este campo.** Ocultar los botones dificulta la descarga y la difusión del contenido, pero no lo protege por completo: el archivo se sigue viendo en la página pública de la ficha y cualquier persona que conozca su dirección (URL) puede acceder a él. Por tanto, este campo no sustituye a las precauciones de la sección 4.2. Si un contenido no debe ser visible para el público, no lo suba o marque la ficha como privada (sección 4.5).
+**Importante: qué protege y qué no protege este campo.** Ocultar los botones dificulta la descarga y la difusión del contenido, pero no la impide: el archivo se sigue viendo en la página pública de la ficha y cualquier persona puede guardarlo, hacer una captura de pantalla o acceder a él si conoce su dirección (URL). Por ello, si no desea que un material pueda ser copiado o reutilizado, le recomendamos no publicarlo en la Mediateca y usar un espacio privado, como las aulas virtuales habilitadas por la Consejería, o bien marcar la ficha como privada (sección 4.5).
+
+**Consentimientos e imágenes de menores:** independientemente del valor de este campo, para publicar fotografías, vídeos o audios en los que aparezcan personas, en especial alumnado, siempre debe contar con los consentimientos pertinentes (sección 4.2) y asegurarse de que los materiales se publican con fines educativos. Restringir el acceso no sustituye en ningún caso al consentimiento. En general, debemos velar por el interés superior del menor y minimizar su exposición pública, por lo que se desaconseja la publicación de imágenes de menores en abierto.
 
 **Fichas creadas anteriormente:** las fichas existentes no tienen valor en este campo y, por tanto, siguen mostrando los botones. Revise especialmente las fichas con fotografías o vídeos de personas y asigne el valor que corresponda. Si son muchas, puede hacerlo con la edición en lote (capítulo 7).
 
