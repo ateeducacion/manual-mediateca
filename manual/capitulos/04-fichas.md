@@ -114,7 +114,9 @@ Para ello, la plantilla 'Ficha_Mediateca' incluye el campo obligatorio **Derecho
 
 - **Varios valores:** los botones solo se muestran si todos los valores son 'Acceso abierto'. Basta con que uno sea distinto para que se oculten.
 
-- **Sin valor:** los botones se muestran (ver más abajo «Fichas sin valor en este campo»).
+- **Sin valor:** los botones se ocultan (ver más abajo «Fichas sin valor en este campo»).
+
+En resumen, los botones solo se muestran cuando el campo tiene valor y todos sus valores son 'Acceso abierto'.
 
 **¿Qué valor elegir?**
 
