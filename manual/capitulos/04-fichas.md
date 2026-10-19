@@ -26,6 +26,8 @@ En la primera pestaña, complete los campos de metadatos. Por defecto, tendrá a
 
 - **Derechos \[dcterms:rights\]:** información sobre los derechos sobre el recurso (ver sección 4.2 sobre protección de datos y consentimientos).
 
+- **Derechos de acceso \[dcterms:accessRights\] (obligatorio):** indica si en la vista pública se permite descargar, enlazar e incrustar los archivos de la ficha. **Ejemplo:** *'Acceso abierto'* para una guía didáctica o *'Acceso restringido'* para las fotografías de una actividad del centro (ver sección 4.2.1).
+
 - **Creador/Autor \[dcterms:creator\]:** nombre de la persona o institución que creó el recurso. **Ejemplo:** *'María García López'* o *'Departamento de Ciencias'*
 
 - **Materia/Tema \[dcterms:subject\]:** palabras clave o temas. Admite múltiples valores ('Añadir valor').
@@ -91,6 +93,50 @@ Antes de subir cualquier imagen, vídeo o documento que contenga datos personale
 - Si tiene dudas, consulte la normativa aplicable (RGPD, LOPDGDD) y las guías de la CEFPAFD, o contacte con el Delegado de Protección de Datos de la Consejería.
 
 **Recordatorio importante:** si una familia o persona retira su consentimiento, debe eliminar inmediatamente el contenido afectado. En caso de duda, consulte al equipo directivo o a las instancias autorizadas en materia de protección de datos.
+
+### 4.2.1. Derechos de acceso: descarga y difusión de los archivos
+
+No todo el contenido que se publica en la Mediateca debe poder descargarse o compartirse libremente. Por ejemplo, las fotografías de una actividad del centro pueden mostrarse en su sitio, pero no conviene facilitar que se descarguen o se inserten en otras páginas web.
+
+Para ello, la plantilla 'Ficha_Mediateca' incluye el campo obligatorio **Derechos de acceso \[dcterms:accessRights\]**. Su valor determina si, en la vista pública de la ficha, junto a cada archivo se muestran los botones para:
+
+- Descargar el archivo.
+
+- Copiar el enlace al archivo.
+
+- Copiar el código de incrustación, que permite insertar el archivo en otra página web.
+
+**Cómo se comportan los botones según el valor del campo:**
+
+- **'Acceso abierto':** los botones se muestran y cualquier visitante puede descargar, enlazar o incrustar el archivo.
+
+- **Cualquier otro valor** (por ejemplo, *'Acceso restringido'*): los botones se ocultan.
+
+- **Varios valores:** los botones solo se muestran si todos los valores son 'Acceso abierto'. Basta con que uno sea distinto para que se oculten.
+
+- **Sin valor:** los botones se muestran (ver más abajo «Fichas sin valor en este campo»).
+
+**¿Qué valor elegir?**
+
+- Elija **'Acceso abierto'** para los recursos educativos que desea compartir y que otros puedan reutilizar: presentaciones, guías didácticas, materiales propios, etc., siempre que no contengan datos personales.
+
+- Elija un valor **restringido** para cualquier imagen, vídeo o documento con datos personales, aunque cuente con el consentimiento de las personas implicadas. Que se pueda mostrar un contenido en la Mediateca no significa que deba facilitarse su descarga y difusión fuera de ella.
+
+- **En caso de duda, elija la opción restringida.** Siempre podrá cambiarla más adelante si se confirma que el contenido puede compartirse.
+
+**Importante: qué protege y qué no protege este campo.** Ocultar los botones dificulta la descarga y la difusión del contenido, pero no la impide: el archivo se sigue viendo en la página pública de la ficha y cualquier persona puede guardarlo, hacer una captura de pantalla o acceder a él si conoce su dirección (URL). Por ello, si no desea que un material pueda ser copiado o reutilizado, le recomendamos no publicarlo en la Mediateca y usar un espacio privado, como las aulas virtuales habilitadas por la Consejería, o bien marcar la ficha como privada (sección 4.5).
+
+**Consentimientos e imágenes de menores:** independientemente del valor de este campo, para publicar fotografías, vídeos o audios en los que aparezcan personas, en especial alumnado, siempre debe contar con los consentimientos pertinentes (sección 4.2) y asegurarse de que los materiales se publican con fines educativos. Restringir el acceso no sustituye en ningún caso al consentimiento. En general, debemos velar por el interés superior del menor y minimizar su exposición pública, por lo que se desaconseja la publicación de imágenes de menores en abierto.
+
+**Fichas sin valor en este campo:** si una ficha no tiene ningún valor en 'Derechos de acceso', los botones de descarga, enlace e incrustación se siguen mostrando. Esto ocurre en dos casos:
+
+- Fichas creadas antes de que se añadiera este campo a la plantilla 'Ficha_Mediateca'.
+
+- Fichas creadas sin usar la plantilla 'Ficha_Mediateca' (por ejemplo, si se cambió o se quitó la plantilla en el formulario), ya que en ese caso el campo no es obligatorio.
+
+Revise especialmente las fichas con fotografías, vídeos o audios de personas y asigne el valor que corresponda. Si son muchas, puede hacerlo con la edición en lote (capítulo 7).
+
+**Nota:** estos botones solo aparecen en los archivos del apartado 'Files' de la vista pública de la ficha. El resto de medios no los muestra.
 
 ## 4.3. Guardar y publicar la ficha
 
