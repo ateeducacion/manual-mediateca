@@ -34,7 +34,7 @@ Los metadatos son la información descriptiva de una ficha. Son como las fichas 
 
 - **Derechos:** información sobre uso y licencias
 
-- **Derechos de acceso:** si se permite descargar y compartir los archivos desde la vista pública
+- **Restricción de descarga:** si se permite descargar y compartir los archivos desde la vista pública
 
 **Importante:** completar correctamente los metadatos es fundamental para que los recursos se puedan encontrar fácilmente. Una buena catalogación hace que la Mediateca sea realmente útil para toda la comunidad educativa.
 

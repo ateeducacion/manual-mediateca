@@ -26,7 +26,7 @@ En la primera pestaña, complete los campos de metadatos. Por defecto, tendrá a
 
 - **Derechos \[dcterms:rights\]:** información sobre los derechos sobre el recurso (ver sección 4.2 sobre protección de datos y consentimientos).
 
-- **Derechos de acceso \[dcterms:accessRights\] (obligatorio):** indica si en la vista pública se permite descargar, enlazar e incrustar los archivos de la ficha. **Ejemplo:** *'Acceso abierto'* para una guía didáctica o *'Acceso restringido'* para las fotografías de una actividad del centro (ver sección 4.2.1).
+- **Restricción de descarga \[dcterms:accessRights\] (obligatorio):** indica si en la vista pública se permite descargar, enlazar e incrustar los archivos de la ficha. **Ejemplo:** *'Acceso abierto'* para una guía didáctica o *'Acceso restringido'* para las fotografías de una actividad del centro (ver sección 4.2.1).
 
 - **Creador/Autor \[dcterms:creator\]:** nombre de la persona o institución que creó el recurso. **Ejemplo:** *'María García López'* o *'Departamento de Ciencias'*
 
@@ -94,11 +94,11 @@ Antes de subir cualquier imagen, vídeo o documento que contenga datos personale
 
 **Recordatorio importante:** si una familia o persona retira su consentimiento, debe eliminar inmediatamente el contenido afectado. En caso de duda, consulte al equipo directivo o a las instancias autorizadas en materia de protección de datos.
 
-### 4.2.1. Derechos de acceso: descarga y difusión de los archivos
+### 4.2.1. Restricción de descarga de los archivos
 
 No todo el contenido que se publica en la Mediateca debe poder descargarse o compartirse libremente. Por ejemplo, las fotografías de una actividad del centro pueden mostrarse en su sitio, pero no conviene facilitar que se descarguen o se inserten en otras páginas web.
 
-Para ello, la plantilla 'Ficha_Mediateca' incluye el campo obligatorio **Derechos de acceso \[dcterms:accessRights\]**. Su valor determina si, en la vista pública de la ficha, junto a cada archivo se muestran los botones para:
+Para ello, la plantilla 'Ficha_Mediateca' incluye el campo obligatorio **Restricción de descarga \[dcterms:accessRights\]**. Su valor determina si, en la vista pública de la ficha, junto a cada archivo se muestran los botones para:
 
 - Descargar el archivo.
 
@@ -128,7 +128,7 @@ Para ello, la plantilla 'Ficha_Mediateca' incluye el campo obligatorio **Derecho
 
 **Consentimientos e imágenes de menores:** independientemente del valor de este campo, para publicar fotografías, vídeos o audios en los que aparezcan personas, en especial alumnado, siempre debe contar con los consentimientos pertinentes (sección 4.2) y asegurarse de que los materiales se publican con fines educativos. Restringir el acceso no sustituye en ningún caso al consentimiento. En general, debemos velar por el interés superior del menor y minimizar su exposición pública, por lo que se desaconseja la publicación de imágenes de menores en abierto.
 
-**Fichas sin valor en este campo:** si una ficha no tiene ningún valor en 'Derechos de acceso', los botones de descarga, enlace e incrustación se siguen mostrando. Esto ocurre en dos casos:
+**Fichas sin valor en este campo:** si una ficha no tiene ningún valor en 'Restricción de descarga', los botones de descarga, enlace e incrustación se siguen mostrando. Esto ocurre en dos casos:
 
 - Fichas creadas antes de que se añadiera este campo a la plantilla 'Ficha_Mediateca'.
 
