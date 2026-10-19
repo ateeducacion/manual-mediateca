@@ -19,7 +19,7 @@ Control de versiones del **Manual de usuario del servicio de Mediateca** (*Guía
 
 ## Generar el PDF
 
-Genera el PDF en `dist/` (ignorado por git). Requisitos: `pandoc` (>= 3.1), `xelatex` (TeX Live con `latex-extra`) y la fuente Liberation Sans.
+Genera el PDF en `dist/` (ignorado por git). Requisitos: `pandoc` (>= 3.1), `xelatex` (TeX Live con `latex-extra` y `texlive-lang-spanish` para la separación silábica en español) y la fuente Liberation Sans.
 
 ```sh
 make pdf        # -> dist/manual-mediateca-v<VERSION>.pdf
