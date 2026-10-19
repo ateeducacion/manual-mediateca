@@ -2,7 +2,7 @@
 
 ## [Sin publicar]
 
-- Nuevo campo obligatorio 'Derechos de acceso' \[dcterms:accessRights\] en la plantilla 'Ficha_Mediateca' (sección 4.1.1).
+- Nuevo campo obligatorio 'Restricción de descarga' \[dcterms:accessRights\] en la plantilla 'Ficha_Mediateca' (sección 4.1.1).
 - Nueva sección 4.2.1 sobre cómo controla ese campo los botones de descarga, enlace e incrustación de los archivos,
   y sus límites en materia de protección de datos.
 
