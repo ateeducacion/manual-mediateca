@@ -1,10 +1,21 @@
 # Historial de cambios
 
-## [Sin publicar]
+## [1.2] - 19/10/2026
 
-- Nuevo campo obligatorio 'Restricción de descarga' \[dcterms:accessRights\] en la plantilla 'Ficha_Mediateca' (sección 4.1.1).
+### Contenido
+
+- Nuevo campo obligatorio 'Restricción de descarga' \[dcterms:accessRights\] en la plantilla 'Ficha_Mediateca' (secciones 3.3 y 4.1.1).
 - Nueva sección 4.2.1 sobre cómo controla ese campo los botones de descarga, enlace e incrustación de los archivos,
-  y sus límites en materia de protección de datos.
+  sus límites en materia de protección de datos y la necesidad de contar siempre con los consentimientos,
+  en especial en las imágenes de menores.
+
+### Maquetación y fuentes
+
+- Portada ajustada al diseño del manual original.
+- Separación silábica en español en el PDF.
+- El texto fuente se divide en un fichero por capítulo (`manual/capitulos/`) y los logotipos de la portada
+  pasan a `manual/assets/` con nombres descriptivos.
+- El PDF de `main` se publica en la *pre-release* `latest` y el de cada versión en su *release*.
 
 ## [1.1] - 21/07/2026
 
